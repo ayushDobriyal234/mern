@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mern Note</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0  ;
+        }
+        #noteCanvas {
+            height: 100vh;
+            background-color: rgb(235, 243, 246);
+            cursor:crosshair;
+            /* position: relative; */
+        }
+        .top-bar{
+            background-color: rgb(224, 224, 224);
+            height: 90px;
+            width: 500px;
+            position: fixed;
+            top: 20px;
+            margin-left: 20px   ;
+            display: flex;
+            justify-content: center;
+            border-radius: 25px;
+            align-items: center;
+            gap: 30px;
+            
+        }
+        .icon i{
+            font-size: 25px;
+            cursor: pointer;
+            justify-content: space-evenly;
+            border-radius: 20px;
+        }
+        .icon img:hover{
+            cursor: pointer;background-color: rgb(189, 189, 189);
+        }
+
+        #colors{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .circle{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .colorRed{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .colorBlue{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .colorGreen{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .colorBlack{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="icon"><i class="fa-solid fa-pen"></i></div>
+        <div class="icon"><i class="fa-solid fa-eraser"></i></div>
+        <!-- <div id="colors" class="black" style =" background-color: black;" onclick="blue()"></div>
+        <div id="colors" class="red" style="background-color: red;" ></div>
+        <div id="colors" class="blue"  style="background-color: blue;" ></div>
+        <div id="colors" class="green" style="background-color: green;" ></div> -->
+        <button id="colors" class="red" style="background-color: red;" onclick="red()"></button>
+        <button id="colors" class="blue"  style="background-color: blue;" onclick="blue()"></button>
+        <button id="colors" class="black" style =" background-color: black;" onclick="black()">
+        <button id="colors" class="green" style="background-color: green;" onclick="green()"></button>
+    </div>
+    <div id="noteCanvas">
+
+    </div>
+
+    <script>
+        const note = document.querySelector("#noteCanvas");
+        const blackColor = document.querySelector(".black")
+        const blueColor = document.querySelector(".blue")
+        const redColor = document.querySelector(".red")
+        const greenColor = document.querySelector(".green")
+        
+        note.addEventListener("click", (e) =>{
+            const ele = document.createElement("div")
+            ele.classList.add("circle");
+            ele.style.top = e.clientY - 50 + "px";
+            ele.style.left = e.clientX - 50 + "px";
+            note.appendChild(ele)
+
+            function blue (){
+                ele.classList.add("blue")
+            }
+               function black (){
+                ele.style.backgroundColor = "black"
+            }
+               function red (){
+                ele.style.backgroundColor = "red"
+            }
+               function green (){
+                ele.style.backgroundColor = "green"
+            }
+            // blue();
+            // green();
+            // black();
+            // red();
+        })
+        
+        
+    </script>
+</body>
+</html>

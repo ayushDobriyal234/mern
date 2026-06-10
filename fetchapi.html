@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Finder</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+.search-box{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.search-box input{
+    flex:1;
+    height:60px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    padding:0 20px;
+    font-size:18px;
+    background:#1e293b;
+    color:white;
+}
+
+.search-box button{
+    width:150px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    background:#e50914;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    transform:translateY(-3px);
+}
+
+.movie-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    gap:25px;
+    padding:25px;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.poster{
+    width:250px;
+    height:370px;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.poster img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.details{
+    flex:1;
+}
+
+.details h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.meta{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.meta span{
+    background:#334155;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+.rating{
+    font-size:22px;
+    color:#facc15;
+    margin-bottom:20px;
+}
+
+.plot{
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+@media(max-width:768px){
+
+.movie-card{
+    flex-direction:column;
+}
+
+.poster{
+    width:100%;
+    height:450px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="search-box">
+        <input type="text" placeholder="Enter Movie Name...">
+        <button class="search">Search</button>
+    </div>
+
+    <div class="movie-card">
+
+        <div class="poster">
+            
+        </div>
+
+        <div class="details">
+
+            <h1></h1>
+
+            <div class="meta">
+                <span class="year"></span>
+                <span class="genre"></span>
+                <span class="time"></span>
+                <span director></span>
+            </div>
+
+            <div class="rating">
+                
+            </div>
+
+            <p class="plot">
+                
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const btn = document.querySelector(".search");
+
+btn.addEventListener("click", () => {
+
+
+    
+})
+
+
+</script>
+
+</body>
+</html>
