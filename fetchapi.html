@@ -189,14 +189,14 @@
             fetch(`https://api.tvmaze.com/search/shows?q=${searchBox}`)
             .then((res) => res.json())
             .then((data) => {
+    
             console.log(data);
-            
+
             const title = document.querySelector(".title");
             title.innerHTML = data[0].show.name;
-            // title.style.fontSize = "20px";
             console.log(title);
             const img = document.querySelector(".img");
-            img.src = data[0].show.image.original;
+            img.src = data[0].show.image?.original || "";
 
             const year = document.querySelector(".year")
             year.innerHTML = data[0].show.premiered;
@@ -215,6 +215,7 @@
 
             const plot = document.querySelector(".plot")
             plot.innerHTML = data[0].show.summary;
+
             })
         }
         catch(error){
