@@ -109,6 +109,8 @@ body {
     box-shadow: inset 3px 0 0 var(--accent-signal);
 }
 
+
+
 /* --- MOBILE HEADER & OVERLAY NAVIGATION --- */
 .mobile-navbar {
     background-color: #121316;
@@ -621,4 +623,9 @@ body {
     .skill-fill {
         width: var(--final-width) !important;
     }
+}
+
+
+#certificates a{
+    color: var(--accent-signal)
 }
