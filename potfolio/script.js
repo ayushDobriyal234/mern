@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    
     // 2. ACTIVE SECTION HIGHLIGHTER SYSTEM (INTERSECTION OBSERVER)
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
