@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. METRIC COUNT-UP SCROLL INTERACTION
-    function triggerMetricCounters() {
+    function triggerMetricCounters(){
         const numbers = document.querySelectorAll('.metric-number');
         
         numbers.forEach(num => {
